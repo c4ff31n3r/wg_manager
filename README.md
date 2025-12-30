@@ -18,7 +18,7 @@ Simple WireGuard client manager. Manages clients, keys, and configuration secure
 1. Clone repository:
 
     ```bash
-    git clone <URL_REPO>
+    git clone https://github.com/c4ff31n3r/wg_manager.git
     cd wg_manager
     ```
 
