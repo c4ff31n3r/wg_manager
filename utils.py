@@ -49,7 +49,7 @@ def log_action(log_file, action, username, ip, client_os, purpose, allowed_ips, 
     logs["logs"].append(entry)
 
     # Limit log size
-    if len(logs["logs"]) > MAX_LOG_ENTRIES":
+    if len(logs["logs"]) > MAX_LOG_ENTRIES:
         logs["logs"] = logs["logs"][-MAX_LOG_ENTRIES:]
 
     save_yaml(log_file, logs)

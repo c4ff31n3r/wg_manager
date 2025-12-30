@@ -3,7 +3,7 @@
 import os
 import sys
 from utils import die, ensure_dirs
-from config import DB_FILE, LOG_FILE, BASE_DIR
+from config import DB_FILE, LOG_FILE
 from storage import ClientStore
 
 from commands import issue, revoke, recreate, edit, list as list_cmd, import_peers
@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     # Create DB/LOG dirs and files, if not present
     ensure_dirs({
-        f"{BASE_DIR}/clients.yaml": {"clients": {}},
-        f"{BASE_DIR}/logs.yaml": {"logs": []}
+        DB_FILE: {"clients": {}},
+        LOG_FILE: {"logs": []}
     })
 
     store = ClientStore(DB_FILE)
