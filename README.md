@@ -30,9 +30,9 @@ Simple WireGuard client manager. Manages clients, keys, and configuration secure
 
 Test installation:
 
-    ```bash
-    wg_manager
-    ```
+```bash
+wg_manager
+```
 
 ---
 
@@ -40,22 +40,22 @@ Test installation:
 
 Run `wg_manager` followed by the command. Examples:
 
-    ```bash
-    sudo wg_manager issue
-    sudo wg_manager revoke john_doe
-    sudo wg_manager recreate john_doe
-    sudo wg_manager edit john_doe
-    sudo wg_manager list
-    sudo wg_manager import
-    ```
+```bash
+sudo wg_manager issue
+sudo wg_manager revoke john_doe
+sudo wg_manager recreate john_doe
+sudo wg_manager edit john_doe
+sudo wg_manager list
+sudo wg_manager import
+```
 
 ---
 
 ## Uninstallation
 
-    ```bash
-    sudo ./uninstall.sh
-    ```
+```bash
+sudo ./uninstall.sh
+```
 
 **Notes:**
 
@@ -64,10 +64,10 @@ Run `wg_manager` followed by the command. Examples:
 - Data: `/etc/wg_manager`
 - Remove manually if needed:
 
-    ```bash
-    sudo rm -rf /usr/lib/wg_manager
-    sudo rm -rf /etc/wg_manager
-    ```
+```bash
+sudo rm -rf /usr/lib/wg_manager
+sudo rm -rf /etc/wg_manager
+```
 
 ---
 
