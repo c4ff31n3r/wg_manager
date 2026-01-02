@@ -212,5 +212,3 @@ __marimo__/
 # Ignore GNU Nano save files
 *.save
 
-# Ignore legacy version
-wg_manager

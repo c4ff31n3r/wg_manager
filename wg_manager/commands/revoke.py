@@ -1,8 +1,8 @@
-from wg_runtime import remove_peer
-from wg_config import remove_peer_from_config
-from utils import log_action
-from config import WG_IF, LOG_FILE
-from storage import ClientStore
+from wg_manager.wg_runtime import remove_peer
+from wg_manager.wg_config import remove_peer_from_config
+from wg_manager.utils import log_action
+from wg_manager.config import WG_IF, LOG_FILE
+from wg_manager.storage import ClientStore
 
 def run(store: ClientStore, username: str):
     client = store.get(username)

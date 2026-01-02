@@ -1,4 +1,4 @@
-from config import WG_CONF
+from wg_manager.config import WG_CONF
 
 # ================= WG CONFIG =================
 

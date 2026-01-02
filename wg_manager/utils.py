@@ -3,7 +3,7 @@ import sys
 import yaml
 import datetime
 import urllib.request
-from config import MAX_LOG_ENTRIES
+from wg_manager.config import MAX_LOG_ENTRIES
 
 # ================= UTILS =================
 
