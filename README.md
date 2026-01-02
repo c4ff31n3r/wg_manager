@@ -11,6 +11,15 @@ Simple WireGuard client manager. Manages clients, keys, and configuration secure
 - List all clients
 - Logs all actions
 
+## Dependencies
+
+- Linux or FreeBSD
+- wg, wg-quick
+- Python >=3.8
+- PyYAML 6.0.3
+- pipx
+- Root privileges
+
 ---
 
 ## Installation
@@ -24,9 +33,16 @@ Simple WireGuard client manager. Manages clients, keys, and configuration secure
 
 2. Install system-wide:
 
+    using pipx >=1.5.0:
     ```bash
     sudo pipx ensurepath --global
     sudo pipx install --global .
+    ```
+ 
+    using pipx <1.5.0:
+    ```bash
+    echo 'export PATH="$PATH:/usr/local/bin"' | sudo tee /etc/profile.d/pipx-global.sh
+    sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/local/share/man pipx install .
     ```
 
 Test installation:
