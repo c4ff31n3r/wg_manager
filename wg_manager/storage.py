@@ -1,4 +1,4 @@
-from utils import load_yaml, save_yaml
+from wg_manager.utils import load_yaml, save_yaml
 
 class ClientStore:
     def __init__(self, db_file):

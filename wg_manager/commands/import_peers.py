@@ -1,5 +1,5 @@
-from wg_config import import_peers_from_config
-from storage import ClientStore
+from wg_manager.wg_config import import_peers_from_config
+from wg_manager.storage import ClientStore
 
 def run(store: ClientStore):
     import_peers_from_config(store)

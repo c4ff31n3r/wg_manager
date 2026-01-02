@@ -1,9 +1,9 @@
-from wg_keys import wg_genkey, server_pubkey
-from wg_runtime import remove_peer, add_peer
-from wg_config import remove_peer_from_config, add_peer_to_config
-from utils import get_public_ip, log_action
-from config import WG_IF, LOG_FILE
-from storage import ClientStore
+from wg_manager.wg_keys import wg_genkey, server_pubkey
+from wg_manager.wg_runtime import remove_peer, add_peer
+from wg_manager.wg_config import remove_peer_from_config, add_peer_to_config
+from wg_manager.utils import get_public_ip, log_action
+from wg_manager.config import WG_IF, LOG_FILE
+from wg_manager.storage import ClientStore
 
 def run(store: ClientStore, username: str):
     client = store.get(username)

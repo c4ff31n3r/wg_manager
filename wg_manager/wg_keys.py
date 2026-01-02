@@ -1,6 +1,6 @@
 import subprocess
-from utils import die
-from config import WG_CONF
+from wg_manager.utils import die
+from wg_manager.config import WG_CONF
 
 # ================= WG KEYS =================
 

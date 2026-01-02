@@ -25,7 +25,8 @@ Simple WireGuard client manager. Manages clients, keys, and configuration secure
 2. Install system-wide:
 
     ```bash
-    sudo ./install.sh
+    sudo pipx ensurepath --global
+    sudo pipx install --global .
     ```
 
 Test installation:
@@ -33,8 +34,6 @@ Test installation:
 ```bash
 wg_manager
 ```
-
----
 
 ## Usage
 
@@ -49,27 +48,21 @@ sudo wg_manager list
 sudo wg_manager import
 ```
 
----
+## Updating
+
+When you have a new version in your local repository, update the global installation with:
+
+```bash
+cd /path/to/wg_manager
+git pull origin master
+sudo pipx upgrade --global .
+```
 
 ## Uninstallation
 
 ```bash
-sudo ./uninstall.sh
+sudo pipx uninstall wg_manager
 ```
-
-**Notes:**
-
-- Uninstaller **does not automatically delete data or code directories**.
-- Code: `/usr/lib/wg_manager`
-- Data: `/etc/wg_manager`
-- Remove manually if needed:
-
-```bash
-sudo rm -rf /usr/lib/wg_manager
-sudo rm -rf /etc/wg_manager
-```
-
----
 
 ## License
 
