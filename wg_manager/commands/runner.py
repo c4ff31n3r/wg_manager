@@ -23,7 +23,7 @@ def run(args):
     import os
 
     if os.geteuid() != 0:
-        die("Run as root")
+        die("wg_manager must be run as root")
 
     ensure_dirs({
         DB_FILE: {"clients": {}},
