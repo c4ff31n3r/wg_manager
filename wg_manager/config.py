@@ -9,6 +9,8 @@ if SYSTEM == "Linux":
 elif SYSTEM == "FreeBSD":
     WG_CONF = "/usr/local/etc/wireguard"
     DATA_DIR = "/var/db/wg_manager"	
+else:
+    raise RuntimeError(f"Unsupported OS: {SYSTEM}")
 
 WG_IF = "wg0"
 DB_FILE = f"{DATA_DIR}/clients.yaml"
