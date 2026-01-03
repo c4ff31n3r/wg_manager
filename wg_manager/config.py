@@ -6,7 +6,7 @@ SYSTEM = platform.system()
 if SYSTEM == "Linux":
     WG_CONF = "/etc/wireguard/wg0.conf"
     DATA_DIR = "/etc/wg_manager"
-elif: SYSTEM = "FreeBSD":
+elif SYSTEM == "FreeBSD":
     WG_CONF = "/usr/local/etc/wireguard"
     DATA_DIR = "/var/db/wg_manager"	
 
