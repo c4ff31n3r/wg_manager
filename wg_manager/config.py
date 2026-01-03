@@ -1,8 +1,18 @@
+import platform
+
 # ================= CONFIG =================
 
+SYSTEM = platform.system()
+if SYSTEM == "Linux":
+    WG_CONF = "/etc/wireguard/wg0.conf"
+    DATA_DIR = "/etc/wg_manager"
+elif SYSTEM == "FreeBSD":
+    WG_CONF = "/usr/local/etc/wireguard"
+    DATA_DIR = "/var/db/wg_manager"	
+else:
+    raise RuntimeError(f"Unsupported OS: {SYSTEM}")
+
 WG_IF = "wg0"
-WG_CONF = "/etc/wireguard/wg0.conf"
-DATA_DIR = "/etc/wg_manager"
 DB_FILE = f"{DATA_DIR}/clients.yaml"
 LOG_FILE = f"{DATA_DIR}/logs.yaml"
 SUBNET = "10.200.200."
